@@ -67,6 +67,7 @@
           # Lets you run `nix run .` to start nixvim
           default = nvim;
         };
+
         # Add your auto-formatters here.
         # cf. https://numtide.github.io/treefmt/
         treefmt.config = {
