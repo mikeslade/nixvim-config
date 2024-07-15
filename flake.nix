@@ -80,6 +80,7 @@
             # prettier.enable = true;
             # rustfmt.enable = true;
             shfmt.enable = true;
+            stylua.enable = true;
             yamlfmt.enable = true;
           };
         };
