@@ -1,66 +1,89 @@
-{self, ...}: {
-  globalOpts = {
-    # Line numbers
-    number = true;
-    relativenumber = true;
+{
+  config = {
+    opts = {
+      # Enable relative line numbers
+      number = true;
+      relativenumber = true;
 
-    # Always show the signcolumn, otherwise text would be shifted when displaying error icons
-    signcolumn = "yes";
+      # Set tabs to 2 spaces
+      tabstop = 2;
+      softtabstop = 2;
+      showtabline = 2;
+      expandtab = true;
 
-    # Search
-    ignorecase = true;
-    smartcase = true;
+      # Enable auto indenting and set it to spaces
+      smartindent = true;
+      shiftwidth = 2;
 
-    # Tab defaults (might get overwritten by an LSP server)
-    tabstop = 4;
-    shiftwidth = 4;
-    softtabstop = 0;
-    expandtab = true;
-    smarttab = true;
+      # Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
+      breakindent = true;
 
-    # System clipboard support, needs xclip/wl-clipboard
-    clipboard = "unnamedplus";
+      # Enable incremental searching
+      hlsearch = true;
+      incsearch = true;
 
-    # Highlight the current line
-    cursorline = true;
+      # Enable text wrap
+      wrap = true;
 
-    # Show line and column when searching
-    ruler = true;
+      # Better splitting
+      splitbelow = true;
+      splitright = true;
 
-    # Global substitution by default
-    gdefault = true;
+      # Enable mouse mode
+      mouse = "a"; # Mouse
 
-    # Start scrolling when the cursor is X lines away from the top/bottom
-    scrolloff = 5;
-  };
+      # Enable ignorecase + smartcase for better searching
+      ignorecase = true;
+      smartcase = true; # Don't ignore case with capitals
+      grepprg = "rg --vimgrep";
+      grepformat = "%f:%l:%c:%m";
 
-  userCommands = {
-    Q.command = "q";
-    Q.bang = true;
-    Wq.command = "q";
-    Wq.bang = true;
-    WQ.command = "q";
-    WQ.bang = true;
-    W.command = "q";
-    W.bang = true;
-  };
+      # Decrease updatetime
+      updatetime = 50; # faster completion (4000ms default)
 
-  globals.mapleader = " ";
+      # Set completeopt to have a better completion experience
+      completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
 
-  # autoCmd = [
-  #   {
-  #     event = [ "BufEnter" "BufWinEnter" ];
-  #     pattern = [ "*.md" "*.mdx" ];
-  #     command = "MarkdownPreviewToggle";
-  #   }
-  # ];
+      # Enable persistent undo history
+      swapfile = false;
+      backup = false;
+      undofile = true;
 
-  highlight = {
-    Comment = {
-      fg = "#ff00ff";
-      bg = "#000000";
-      underline = true;
-      bold = true;
+      # Enable 24-bit colors
+      termguicolors = true;
+
+      # Enable the sign column to prevent the screen from jumping
+      # signcolumn = "yes";
+
+      # Enable cursor line highlight
+      cursorline = true; # Highlight the line where the cursor is located
+
+      # Set fold settings
+      # These options were reccommended by nvim-ufo
+      # See: https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
+      foldcolumn = "0";
+      foldlevel = 99;
+      foldlevelstart = 99;
+      foldenable = true;
+
+      # Always keep 8 lines above/below cursor unless at start/end of file
+      scrolloff = 8;
+
+      # Place a column line
+      # colorcolumn = "80";
+
+      # Reduce which-key timeout to 10ms
+      timeoutlen = 10;
+
+      # Set encoding type
+      encoding = "utf-8";
+      fileencoding = "utf-8";
+
+      # More space in the neovim command line for displaying messages
+      cmdheight = 0;
+
+      # We don't need to see things like INSERT anymore
+      showmode = false;
     };
   };
 }
