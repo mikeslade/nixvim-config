@@ -4,18 +4,30 @@
     lsp = {
       enable = true;
       servers = {
-        eslint = {enable = true;};
-        html = {enable = true;};
-        lua-ls = {enable = true;};
+        bashls.enable = true;
+        clangd.enable = true;
+        cssls.enable = true;
+        dockerls.enable = true;
+        eslint.enable = true;
+        html.enable = true;
+        lua-ls = {
+          enable = true;
+          settings.telemetry.enable = false;
+        };
         nil-ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         gopls = {enable = true;};
-        terraformls = {enable = true;};
-        tsserver = {enable = false;};
-        yamlls = {
+        rust-analyzer = {
           enable = true;
+          installRustc = false;
+          installCargo = false;
         };
+        /*
+        terraformls = {enable = true;};
+        */
+        tsserver = {enable = false;};
+        yamlls.enable = true;
       };
       keymaps = {
         silent = true;
