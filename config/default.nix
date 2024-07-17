@@ -11,9 +11,6 @@
     ./highlight.nix
     ./keys.nix
     ./options.nix
-
-    # ./options.nix
-    # ./keymappings.nix
   ];
 
   options = {

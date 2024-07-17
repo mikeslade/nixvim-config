@@ -7,7 +7,6 @@
     };
     notifyOnError = true;
     formattersByFt = {
-      liquidsoap = ["liquidsoap-prettier"];
       html = [["prettierd" "prettier"]];
       css = [["prettierd" "prettier"]];
       javascript = [["prettierd" "prettier"]];
@@ -16,9 +15,9 @@
       typescriptreact = [["prettierd" "prettier"]];
       python = ["black"];
       lua = ["stylua"];
-      nix = ["nixpkgs-fmt"];
+      nix = ["alejandra"];
       markdown = [["prettierd" "prettier"]];
-      yaml = ["yamllint" "yamlfmt"];
+      yaml = ["yamlfmt"];
     };
   };
 }

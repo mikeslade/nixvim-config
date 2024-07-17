@@ -15,7 +15,7 @@
         yamllint.enable = true;
       };
       formatting = {
-        nixpkgs_fmt.enable = true;
+        alejandra.enable = true;
         black = {
           enable = true;
           withArgs = ''
@@ -24,6 +24,7 @@
             }
           '';
         };
+        just.enable = true;
         prettier = {
           enable = true;
           disableTsServerFormatter = true;
@@ -33,6 +34,9 @@
             }
           '';
         };
+        prettierd.enable = true;
+        rustywind.enable = true;
+        shfmt.enable = true;
         stylua.enable = true;
         yamlfmt.enable = true;
       };

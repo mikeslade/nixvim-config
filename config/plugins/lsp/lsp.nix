@@ -9,24 +9,25 @@
         cssls.enable = true;
         dockerls.enable = true;
         eslint.enable = true;
+        gopls.enable = true;
         html.enable = true;
         lua-ls = {
           enable = true;
           settings.telemetry.enable = false;
         };
-        nil-ls = {enable = true;};
-        marksman = {enable = true;};
-        pyright = {enable = true;};
-        gopls = {enable = true;};
+        nil-ls.enable = true;
+        marksman.enable = true;
+        pyright.enable = true;
         rust-analyzer = {
           enable = true;
           installRustc = false;
           installCargo = false;
         };
+        taplo.enable = true;
         /*
         terraformls = {enable = true;};
         */
-        tsserver = {enable = false;};
+        tsserver.enable = false;
         yamlls.enable = true;
       };
       keymaps = {
