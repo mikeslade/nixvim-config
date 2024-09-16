@@ -18,33 +18,32 @@ in {
             fg = colors.base03;
             bg = colors.base01;
           };
-          bufferSelected = {
+          buffer_selected = {
             fg = colors.base05;
             bg = colors.base00;
             italic = false;
           };
-          bufferVisible = {
+          buffer_visible = {
             fg = colors.base03;
             bg = colors.base00;
           };
-          closeButton = {
+          close_button = {
             fg = colors.base03;
             bg = colors.base01;
           };
-          closeButtonVisible = {
+          close_button_visible = {
             fg = colors.base03;
             bg = colors.base01;
           };
-          closeButtonSelected = {
+          close_button_selected = {
             fg = colors.base08;
             bg = colors.base00;
           };
-
-          indicatorSelected = {
+          indicator_selected = {
             fg = colors.base00;
             bg = colors.base00;
           };
-          indicatorVisible = {
+          indicator_visible = {
             fg = colors.base00;
             bg = colors.base00;
           };
@@ -56,15 +55,15 @@ in {
             fg = colors.base03;
             bg = colors.base00;
           };
-          modifiedVisible = {
+          modified_visible = {
             fg = colors.base00;
             bg = colors.base00;
           };
-          modifiedSelected = {
+          modified_selected = {
             fg = colors.base0B;
             bg = colors.base00;
           };
-          tabClose = {
+          tab_close = {
             fg = colors.base00;
             bg = colors.base00;
           };
