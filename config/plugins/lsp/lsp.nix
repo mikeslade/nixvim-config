@@ -27,7 +27,7 @@
         /*
         terraformls = {enable = true;};
         */
-        tsserver.enable = false;
+        ts-ls.enable = false;
         yamlls.enable = true;
       };
       keymaps = {
@@ -81,6 +81,9 @@
           };
         };
       };
+    };
+    web-devicons = {
+      enable = true;
     };
   };
   extraConfigLua = ''

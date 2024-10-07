@@ -261,7 +261,7 @@
       enable = true;
       servers = {
         # Average webdev LSPs
-        tsserver.enable = true; # TS/JS
+        ts-ls.enable = true; # TS/JS
         cssls.enable = true; # CSS
         tailwindcss.enable = true; # TailwindCSS
         html.enable = true; # HTML
@@ -330,6 +330,8 @@
     cmp-cmdline = {
       enable = false; # Enable autocomplete for command line
     };
+
+    web-devicons.enable = true;
   };
 
   colorschemes.catppuccin = {
