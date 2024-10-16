@@ -11,14 +11,14 @@
         eslint.enable = true;
         gopls.enable = true;
         html.enable = true;
-        lua-ls = {
+        lua_ls = {
           enable = true;
           settings.telemetry.enable = false;
         };
-        nil-ls.enable = true;
+        nil_ls.enable = true;
         marksman.enable = true;
         pyright.enable = true;
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
           installRustc = false;
           installCargo = false;
@@ -27,7 +27,7 @@
         /*
         terraformls = {enable = true;};
         */
-        ts-ls.enable = false;
+        ts_ls.enable = false;
         yamlls.enable = true;
       };
       keymaps = {
