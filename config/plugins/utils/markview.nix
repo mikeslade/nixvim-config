@@ -2,12 +2,12 @@
   extraPlugins = with pkgs.vimUtils; [
     (buildVimPlugin {
       pname = "markview.nvim";
-      version = "0.0.1";
+      version = "24.0.0";
       src = pkgs.fetchFromGitHub {
         owner = "OXY2DEV";
         repo = "markview.nvim";
-        rev = "a959d77ca7e9f05175e3ee4e582db40b338c9164";
-        hash = "sha256-w6yn8aNcJMLRbzaRuj3gj4x2J/20wUROLM6j39wpZek=";
+        rev = "72cd34279e94ee96ee33bdf30a87b00e6d45319d";
+        hash = "sha256-4D4jB9CmamMAdpEodw4MdDyJVU6EMsh8P4gLs7p4E40=";
       };
     })
   ];

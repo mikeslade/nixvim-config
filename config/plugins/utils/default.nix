@@ -15,6 +15,6 @@
     ./ufo.nix
     ./undotree.nix
     ./whichkey.nix
-    ./yaml-companion.nix
+    # ./yaml-companion.nix
   ];
 }
