@@ -45,10 +45,15 @@
         config,
         self',
         inputs',
-        pkgs,
         system,
         ...
       }: let
+        # cmp-emoji has no upstream license, so nixpkgs marks it unfree;
+        # copilot-lua depends on the unfree copilot-language-server.
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) ["cmp-emoji" "copilot-language-server"];
+        };
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {

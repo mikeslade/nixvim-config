@@ -33,14 +33,4 @@ in {
     "/queries/nu/highlights.scm".text = builtins.readFile "${nu-grammar}/queries/nu/highlights.scm";
     "/queries/nu/injections.scm".text = builtins.readFile "${nu-grammar}/queries/nu/injections.scm";
   };
-  extraConfigLua = ''
-    local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-
-    parser_config.liquidsoap = {
-      filetype = "liquidsoap",
-    }
-    parser_config.nu = {
-      filetype = "nu",
-    }
-  '';
 }
